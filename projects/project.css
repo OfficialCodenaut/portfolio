@@ -35,12 +35,11 @@
 }
 
 
-/* ===== Project Content ===== */
+/* ===== Project Sections ===== */
 
-.project-content,
+.project-section,
 .project-features,
 .project-workflow,
-.development-section,
 .project-links {
     max-width: 1200px;
     margin: 0 auto;
@@ -50,10 +49,6 @@
     box-sizing: border-box;
 }
 
-.project-content {
-    padding-bottom: 100px;
-}
-
 .project-section {
     margin-bottom: 100px;
 }
@@ -61,7 +56,6 @@
 .project-section h2,
 .project-features h2,
 .project-workflow h2,
-.development-section h2,
 .project-links h2 {
     margin: 0 0 30px;
 
@@ -72,8 +66,7 @@
     color: var(--accent);
 }
 
-.project-section p,
-.development-section p {
+.project-section p {
     max-width: 800px;
     margin: 0 0 20px;
 
@@ -193,9 +186,10 @@
 /* ===== Project Links ===== */
 
 .project-links {
+    display: none;
+
     padding-top: 50px;
     padding-bottom: 80px;
-    display: none;
 
     border-top: 1px solid var(--surface-hover);
 }
@@ -274,17 +268,12 @@ footer {
         padding: 70px 20px 60px;
     }
 
-    .project-content,
+    .project-section,
     .project-features,
     .project-workflow,
-    .development-section,
     .project-links {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .project-content {
-        padding-bottom: 70px;
     }
 
     .project-section,
