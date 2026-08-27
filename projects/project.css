@@ -40,6 +40,7 @@
 .project-section,
 .project-features,
 .project-workflow,
+.development-section,
 .project-links {
     max-width: 1200px;
     margin: 0 auto;
@@ -56,6 +57,7 @@
 .project-section h2,
 .project-features h2,
 .project-workflow h2,
+.development-section h2,
 .project-links h2 {
     margin: 0 0 30px;
 
@@ -66,7 +68,8 @@
     color: var(--accent);
 }
 
-.project-section p {
+.project-section p,
+.development-section p {
     max-width: 800px;
     margin: 0 0 20px;
 
@@ -271,6 +274,7 @@ footer {
     .project-section,
     .project-features,
     .project-workflow,
+    .development-section,
     .project-links {
         padding-left: 20px;
         padding-right: 20px;
@@ -278,6 +282,7 @@ footer {
 
     .project-section,
     .project-features,
+    .development-section,
     .project-workflow {
         margin-bottom: 70px;
     }
