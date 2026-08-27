@@ -1,0 +1,300 @@
+/* ===== Project Hero ===== */
+
+.project-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 30px 80px;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-label {
+    margin: 0 0 15px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    letter-spacing: 3px;
+
+    color: var(--accent);
+}
+
+.project-hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 7vw, 80px);
+}
+
+.project-subtitle {
+    max-width: 700px;
+    margin: 25px auto 0;
+
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* ===== Project Content ===== */
+
+.project-content,
+.project-features,
+.project-workflow,
+.development-section,
+.project-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    box-sizing: border-box;
+}
+
+.project-content {
+    padding-bottom: 100px;
+}
+
+.project-section {
+    margin-bottom: 100px;
+}
+
+.project-section h2,
+.project-features h2,
+.project-workflow h2,
+.development-section h2,
+.project-links h2 {
+    margin: 0 0 30px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 28px;
+    font-weight: 500;
+
+    color: var(--accent);
+}
+
+.project-section p,
+.development-section p {
+    max-width: 800px;
+    margin: 0 0 20px;
+
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ===== Features ===== */
+
+.project-features {
+    margin-bottom: 100px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 25px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 15px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.feature-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.feature-card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ===== Workflow ===== */
+
+.project-workflow {
+    margin-bottom: 100px;
+}
+
+.workflow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.workflow-step {
+    padding: 25px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 15px;
+}
+
+.workflow-step span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+
+    color: var(--accent);
+}
+
+.workflow-step h3 {
+    margin: 15px 0 10px;
+}
+
+.workflow-step p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ===== Project Tags ===== */
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+.project-tags span {
+    padding: 6px 10px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+
+    color: var(--muted);
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 6px;
+}
+
+
+/* ===== Project Links ===== */
+
+.project-links {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    display: none;
+
+    border-top: 1px solid var(--surface-hover);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 10px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+.project-link img {
+    width: 18px;
+    height: 18px;
+
+    filter: brightness(0) invert(1);
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--accent);
+    border-color: var(--accent);
+
+    color: var(--background);
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    padding: 40px 20px;
+
+    border-top: 1px solid var(--surface-hover);
+
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .project-hero {
+        padding: 70px 20px 60px;
+    }
+
+    .project-content,
+    .project-features,
+    .project-workflow,
+    .development-section,
+    .project-links {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-content {
+        padding-bottom: 70px;
+    }
+
+    .project-section,
+    .project-features,
+    .project-workflow {
+        margin-bottom: 70px;
+    }
+
+    .workflow {
+        grid-template-columns: 1fr;
+    }
+
+}
