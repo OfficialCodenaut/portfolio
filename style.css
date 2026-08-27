@@ -384,6 +384,10 @@ header {
 }
 
 @media (max-width: 600px) {
+    header {
+        background-color: var(--background);
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -391,5 +395,13 @@ header {
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .about-section h2,
+    .projects-section h2,
+    .contact-section h2 {
+        font-size: 15px;
+        letter-spacing: 1px;
+        white-space: nowrap;
     }
 }
