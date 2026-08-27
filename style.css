@@ -372,29 +372,68 @@ header {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
+
+    header {
+        position: sticky;
+        top: 20px;
+        z-index: 1000;
+    }
+
+    header::before {
+        content: "";
+
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+
+        height: 120px;
+
+        z-index: -1;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(17, 23, 30, 0.98) 0%,
+            rgba(17, 23, 30, 0.92) 25%,
+            rgba(17, 23, 30, 0.70) 50%,
+            rgba(17, 23, 30, 0.35) 70%,
+            rgba(17, 23, 30, 0.10) 88%,
+            transparent 100%
+        );
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        pointer-events: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 }
 
+
 @media (max-width: 600px) {
-    header {
-        background-color: var(--background);
+
+    .menu {
+        width: fit-content;
+        margin: 12px auto;
+        gap: 2px;
+    }
+
+    .menu li a {
+        padding: 12px 10px;
+        font-size: 14px;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
     }
 
     .about-section h2,
