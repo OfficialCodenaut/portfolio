@@ -1,0 +1,160 @@
+:root {
+    --background: #11171e;
+    --surface: #1f1f1f;
+    --surface-hover: #292929;
+    --text: #fafafa;
+    --muted: #888;
+    --accent: #1fba68;
+}
+
+
+/* ===== Base ===== */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Inter", sans-serif;
+
+    background-color: var(--background);
+    color: var(--text);
+}
+
+
+/* ===== Error Page ===== */
+
+.error-page {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.terminal-output {
+    width: min(550px, 100%);
+    text-align: left;
+}
+
+.error-command {
+    margin: 0 0 8px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+
+    color: var(--accent);
+}
+
+.error-output {
+    margin: 0 0 35px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+
+    color: var(--muted);
+}
+
+.error-page h1 {
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(110px, 20vw, 220px);
+    line-height: 0.9;
+
+    color: var(--accent);
+}
+
+.error-page h2 {
+    margin: 30px 0 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+.error-description {
+    max-width: 550px;
+    margin: 20px 0 35px;
+
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== Link ===== */
+
+.error-link {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 10px;
+
+    color: var(--text);
+    text-decoration: none;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+.error-link:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--accent);
+    border-color: var(--accent);
+
+    color: var(--background);
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    padding: 30px 20px;
+
+    border-top: 1px solid var(--surface-hover);
+
+    text-align: center;
+
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px) {
+
+    .error-command {
+        font-size: 14px;
+    }
+
+    .error-output {
+        font-size: 12px;
+    }
+
+    .error-description {
+        font-size: 16px;
+    }
+
+}
