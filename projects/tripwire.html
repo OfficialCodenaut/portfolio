@@ -59,9 +59,37 @@
             </p>
 
             <p>
-                The project explores security automation, event-driven systems,
-                and automated first-response mechanisms.
+                It provides a simple detection and first-response mechanism for Discord communities, 
+                automatically handling security events when activity is detected in monitored channels.
             </p>
+
+        </section>
+
+
+        <section class="project-status">
+
+            <h2>Project Status</h2>
+
+            <div class="status-output">
+
+                <div class="status-header">
+                    <span>STATUS</span>
+                    <span>VERSION</span>
+                    <span>DEVELOPMENT</span>
+                </div>
+
+                <div class="status-row">
+                    <span class="status-active">
+                        <span class="status-dot"></span>
+                        ACTIVE
+                    </span>
+
+                    <span>1.1.0</span>
+
+                    <span>POST-MVP</span>
+                </div>
+
+            </div>
 
         </section>
 
@@ -134,20 +162,52 @@
         </section>
 
 
+        <section class="tech-stack">
+
+            <h2>Tech Stack</h2>
+
+            <div class="tech-grid">
+
+                <div class="tech-item">
+                    <span class="tech-name">Python</span>
+                    <span class="tech-role">Core Language</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-name">discord.py</span>
+                    <span class="tech-role">Discord API</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-name">python-dotenv</span>
+                    <span class="tech-role">Configuration</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <section class="development-section">
 
             <h2>Development</h2>
 
             <p>
-                Tripwire is built with Python and discord.py, using an
-                event-driven architecture to monitor Discord activity and
-                automatically respond to detected security events.
+                Tripwire follows a modular, event-driven architecture built around separate responsibilities.
             </p>
 
             <p>
-                The project focuses on reliability, maintainability, and
-                practical security automation rather than simply implementing
-                a collection of moderation commands.
+                The bot entry point handles Discord events and routes messages to the Tripwire 
+                detection service. The service layer is responsible for security logic, including
+                detection, logging, notifications, and moderation actions, while configuration and 
+                logging utilities handle persistent server data and runtime information.
+            </p>
+
+            <p>
+                Discord commands are implemented as separate Cogs, keeping setup and 
+                configuration functionality isolated from the core detection system. This structure 
+                makes individual components easier to maintain, modify, and extend as the project 
+                grows.
             </p>
 
         </section>

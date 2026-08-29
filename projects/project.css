@@ -41,7 +41,9 @@
 .project-features,
 .project-workflow,
 .development-section,
-.project-links {
+.project-links,
+.tech-stack,
+.project-status {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 30px;
@@ -58,7 +60,9 @@
 .project-features h2,
 .project-workflow h2,
 .development-section h2,
-.project-links h2 {
+.project-links h2,
+.tech-stack h2,
+.project-status h2 {
     margin: 0 0 30px;
 
     font-family: "JetBrains Mono", monospace;
@@ -76,6 +80,59 @@
     color: var(--muted);
     font-size: 18px;
     line-height: 1.8;
+}
+
+
+/* ===== Project Status ===== */
+
+.project-status {
+    margin-bottom: 100px;
+}
+
+.status-output {
+    overflow: hidden;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 15px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+}
+
+.status-header,
+.status-row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.5fr 1.5fr;
+    gap: 20px;
+
+    padding: 18px 25px;
+}
+
+.status-header {
+    color: var(--muted);
+    border-bottom: 1px solid var(--surface-hover);
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.status-row {
+    color: var(--text);
+}
+
+.status-active {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background-color: var(--accent);
+    border-radius: 50%;
 }
 
 
@@ -159,6 +216,62 @@
     color: var(--muted);
     font-size: 15px;
     line-height: 1.6;
+}
+
+
+/* ===== Tech Stack ===== */
+
+.tech-stack {
+    margin-bottom: 100px;
+}
+
+.tech-stack h2 {
+    margin: 0 0 30px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 28px;
+    font-weight: 500;
+
+    color: var(--accent);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    padding: 20px;
+
+    background-color: var(--surface);
+    border: 1px solid var(--surface-hover);
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+}
+
+.tech-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.tech-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+
+    color: var(--text);
+}
+
+.tech-role {
+    color: var(--muted);
+    font-size: 14px;
 }
 
 
@@ -263,6 +376,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -275,7 +392,9 @@ footer {
     .project-features,
     .project-workflow,
     .development-section,
-    .project-links {
+    .project-links,
+    .tech-stack,
+    .project-status {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -283,7 +402,9 @@ footer {
     .project-section,
     .project-features,
     .development-section,
-    .project-workflow {
+    .project-workflow,
+    .tech-stack,
+    .project-status {
         margin-bottom: 70px;
     }
 
@@ -291,4 +412,21 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-header,
+    .status-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .status-header {
+        display: none;
+    }
+
+    .status-row {
+        padding: 20px;
+    }
 }
