@@ -20,19 +20,29 @@
 
     <header>
         <nav>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
             <ul class="menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#status">Status</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+                <li><a href="#development">Development</a></li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-
     <main>
 
-        <section class="project-hero">
+        <section class="project-hero" id="overview">
             <p class="project-label">PROJECT</p>
             <h1>Tripwire</h1>
 
@@ -66,7 +76,7 @@
         </section>
 
 
-        <section class="project-status">
+        <section class="project-status" id="status">
 
             <h2>Project Status</h2>
 
@@ -94,75 +104,79 @@
         </section>
 
 
-        <section class="project-features">
+        <section class="project-features" id="features">
             <h2>Features</h2>
 
             <div class="features-grid">
+
                 <div class="feature-card">
                     <h3>Honeypot Detection</h3>
-                    <p>Monitored channels designed to detect suspicious activity.</p>
+                    <p>Monitored channels act as honeypots, triggering detection when a user sends a message.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>Event Logging</h3>
-                    <p>Security events are recorded for later analysis.</p>
+                    <p>Detected activity is recorded with relevant user, server, channel, and message information.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>Automated Response</h3>
-                    <p>Configured moderation actions are triggered automatically.</p>
+                    <p>Configurable actions can automatically ban, kick, timeout, or log the detected user.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>User Notification</h3>
-                    <p>Detected users receive a direct notification explaining the action.</p>
+                    <p>Users can receive a direct message explaining why the Tripwire was triggered.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>Message Cleanup</h3>
-                    <p>Messages can be removed automatically after detection.</p>
+                    <p>Triggered messages can be automatically removed as part of the incident response process.</p>
                 </div>
 
                 <div class="feature-card">
                     <h3>Persistent Configuration</h3>
-                    <p>Server configuration is stored locally between restarts.</p>
+                    <p>Server-specific settings are stored locally and preserved between bot restarts.</p>
                 </div>
+
             </div>
         </section>
 
 
-        <section class="project-workflow">
+        <section class="project-workflow" id="workflow">
             <h2>How It Works</h2>
 
             <div class="workflow">
+
                 <div class="workflow-step">
                     <span>01</span>
                     <h3>Setup</h3>
-                    <p>The administrator runs <code>/setup</code>.</p>
+                    <p>The administrator runs <code>/setup</code> to create and configure a dedicated Tripwire channel.</p>
                 </div>
 
                 <div class="workflow-step">
                     <span>02</span>
-                    <h3>Monitor</h3>
-                    <p>Tripwire creates a dedicated monitored channel.</p>
+                    <h3>Detect</h3>
+                    <p>A message sent in the monitored channel triggers the detection system.</p>
                 </div>
 
                 <div class="workflow-step">
                     <span>03</span>
-                    <h3>Detect</h3>
-                    <p>A message in the channel triggers the detection system.</p>
+                    <h3>Log</h3>
+                    <p>Tripwire records the security event with relevant user, server, channel, and message information.</p>
                 </div>
 
                 <div class="workflow-step">
                     <span>04</span>
                     <h3>Respond</h3>
-                    <p>The event is logged, the user is notified, and configured actions are applied.</p>
+                    <p>The user is notified and the configured moderation action is applied.</p>
                 </div>
+
             </div>
         </section>
 
 
-        <section class="tech-stack">
+        <section class="tech-stack" id="tech-stack">
 
             <h2>Tech Stack</h2>
 
@@ -188,19 +202,16 @@
         </section>
 
 
-        <section class="development-section">
+        <section class="development-section" id="development">
 
             <h2>Development</h2>
 
             <p>
-                Tripwire follows a modular, event-driven architecture built around separate responsibilities.
+                Tripwire is structured around an event-driven architecture, with Discord commands separated from the core detection and moderation services.
             </p>
 
             <p>
-                The bot entry point handles Discord events and routes messages to the Tripwire 
-                detection service. The service layer is responsible for security logic, including
-                detection, logging, notifications, and moderation actions, while configuration and 
-                logging utilities handle persistent server data and runtime information.
+                The project has evolved beyond its initial MVP by introducing persistent server configuration, configurable moderation actions, dedicated security logging, and improved error handling for Discord API failures.
             </p>
 
             <p>
