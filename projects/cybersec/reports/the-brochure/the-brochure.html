@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Brochure | Cybersec Reports | Codenaut</title>
+
+    <link rel="icon" type="image/png" href="../../../assets/avatar.png?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../../project.css">
+    <link rel="stylesheet" href="../../report.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#reconnaissance">Recon</a></li>
+                <li><a href="#investigation">Investigation</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="../index.html#reports">Reports</a></li>
+                <li><a href="../../../index.html">Home</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ===== Report Hero ===== -->
+
+        <section class="project-hero" id="overview">
+
+            <p class="project-label">TRYHACKME · OSINT</p>
+
+            <h1>The Brochure</h1>
+
+            <p class="project-subtitle">
+                OSINT investigation of a promotional brochure leading
+                to a hidden social media account and a concealed flag.
+            </p>
+
+            <div class="project-tags">
+                <span>OSINT</span>
+                <span>TryHackMe</span>
+                <span>Easy</span>
+                <span>Hacker Holidays 2026</span>
+            </div>
+
+        </section>
+
+
+        <!-- ===== Metadata ===== -->
+
+        <section class="report-meta">
+
+            <div class="report-meta-item">
+                <span class="report-meta-label">Platform</span>
+                <span class="report-meta-value">TryHackMe</span>
+            </div>
+
+            <div class="report-meta-item">
+                <span class="report-meta-label">Category</span>
+                <span class="report-meta-value">OSINT</span>
+            </div>
+
+            <div class="report-meta-item">
+                <span class="report-meta-label">Difficulty</span>
+                <span class="report-meta-value">Easy</span>
+            </div>
+
+            <div class="report-meta-item">
+                <span class="report-meta-label">Date</span>
+                <span class="report-meta-value">24 July 2026</span>
+            </div>
+
+        </section>
+
+
+        <!-- ===== Description ===== -->
+
+        <section class="project-section">
+
+            <h2>Description</h2>
+
+            <p>
+                The objective of this challenge was to identify a hidden
+                connection left within a promotional image published by
+                the fictional Byte Lotus Hotel.
+            </p>
+
+            <p>
+                The investigation focused on open-source intelligence
+                techniques, including image analysis and social media
+                attribution, in order to identify the hidden account
+                and recover the challenge flag.
+            </p>
+
+        </section>
+
+
+        <!-- ===== Reconnaissance ===== -->
+
+        <section class="project-section" id="reconnaissance">
+
+            <h2>1. Reconnaissance</h2>
+
+            <h3>Initial Analysis</h3>
+
+            <p>
+                The provided challenge consisted of a single promotional
+                image used in the hotel's brochure.
+            </p>
+
+            <p>
+                Based on the challenge description, it was reasonable to
+                assume that the image itself contained hidden indicators
+                that could be used to identify the original source or
+                the creator of the content.
+            </p>
+
+            <figure class="report-figure">
+                <img
+                    src="../../../assets/Hacker_Holidays_2026/day-00/thebrochure.png"
+                    alt="Byte Lotus promotional brochure"
+                >
+                <figcaption>
+                    Figure 1 — Promotional brochure provided as the
+                    initial investigation artifact.
+                </figcaption>
+            </figure>
+
+
+            <h3>Enumeration</h3>
+
+            <p>Tools and techniques used during the initial investigation:</p>
+
+            <ul>
+                <li>ExifTool</li>
+                <li>Manual image inspection</li>
+                <li>Social media search</li>
+                <li>Instagram</li>
+                <li>CyberChef</li>
+            </ul>
+
+            <p>
+                Metadata analysis did not reveal any useful information.
+                Further investigation therefore focused on identifying
+                visual characteristics and tracing the image back to its
+                original online source.
+            </p>
+
+        </section>
+
+
+        <!-- ===== Investigation ===== -->
+
+        <section class="project-section" id="investigation">
+
+            <h2>2. Investigation</h2>
+
+            <h3>Findings</h3>
+
+            <p>
+                During manual inspection of the brochure, two significant
+                indicators were identified.
+            </p>
+
+            <p>
+                The first suggested the existence of an official Instagram
+                presence for the resort. The second introduced the virtual
+                concierge <strong>VERA</strong>, which appeared to represent
+                another potential investigation target.
+            </p>
+
+            <figure class="report-figure">
+                <img
+                    src="../../../assets/Hacker_Holidays_2026/day-00/thebrochure_clues.png"
+                    alt="Byte Lotus brochure with investigation clues highlighted"
+                >
+                <figcaption>
+                    Figure 2 — Promotional brochure with highlighted
+                    investigation clues.
+                </figcaption>
+            </figure>
+
+
+            <h3>Methodology</h3>
+
+            <p>
+                The investigation followed a standard OSINT workflow.
+                Initial analysis focused on extracting information directly
+                from the provided asset.
+            </p>
+
+            <p>
+                After identifying references to social media, publicly
+                available Instagram accounts related to the resort were
+                enumerated. Relationship analysis between publicly visible
+                accounts was then performed in order to identify additional
+                entities connected to the resort.
+            </p>
+
+            <p>
+                Further inspection of the discovered profile revealed
+                multiple Base64-encoded fragments distributed across
+                several public posts.
+            </p>
+
+            <p>
+                After reconstructing the complete encoded string,
+                CyberChef was used to decode the final value, revealing
+                the challenge flag.
+            </p>
+
+            <figure class="report-figure">
+                <img
+                    src="../../../assets/Hacker_Holidays_2026/day-00/resort_instagram.jpg"
+                    alt="Byte Lotus Resort Instagram account"
+                >
+                <figcaption>
+                    Figure 3 — Byte Lotus Resort Instagram account.
+                </figcaption>
+            </figure>
+
+            <figure class="report-figure">
+                <img
+                    src="../../../assets/Hacker_Holidays_2026/day-00/vera_instagram.jpg"
+                    alt="VERA Instagram account"
+                >
+                <figcaption>
+                    Figure 4 — VERA's Instagram account.
+                </figcaption>
+            </figure>
+
+            <figure class="report-figure">
+                <img
+                    src="../../../assets/Hacker_Holidays_2026/day-00/cyberchef_decoding.png"
+                    alt="Base64 string being decoded with CyberChef"
+                >
+                <figcaption>
+                    Figure 5 — Decoding the reconstructed Base64 string
+                    with CyberChef.
+                </figcaption>
+            </figure>
+
+        </section>
+
+
+        <!-- ===== Conclusion ===== -->
+
+        <section class="project-section" id="conclusion">
+
+            <h2>3. Conclusion</h2>
+
+            <h3>Result</h3>
+
+            <p>
+                The investigation successfully revealed the hidden
+                information left by the creator of the Byte Lotus Resort
+                assets.
+            </p>
+
+            <div class="report-result">
+                <span>Recovered Flag</span>
+                <code>THM{REDACTED}</code>
+            </div>
+
+        </section>
+
+
+        <!-- ===== Security Implications ===== -->
+
+        <section class="project-section">
+
+            <h2>4. Security Implications</h2>
+
+            <p>
+                This challenge demonstrates how publicly available
+                information may unintentionally expose sensitive data
+                through OSINT techniques.
+            </p>
+
+            <p>
+                Even when no technical vulnerability exists, publicly
+                accessible relationships between accounts, images, and
+                published content can reveal information that was not
+                intended to be easily discoverable.
+            </p>
+
+            <p>
+                Organizations should carefully review published material,
+                associated social media accounts, and publicly visible
+                relationships before publication.
+            </p>
+
+        </section>
+
+
+        <!-- ===== Lessons Learned ===== -->
+
+        <section class="project-section">
+
+            <h2>5. Lessons Learned</h2>
+
+            <ul class="report-list">
+                <li>OSINT investigations often begin with simple visual inspection.</li>
+                <li>Small clues may become valuable pivot points during an investigation.</li>
+                <li>Social media relationship analysis is an effective attribution technique.</li>
+                <li>Base64 encoding should never be considered a security mechanism.</li>
+                <li>Multiple independent OSINT techniques can be combined to reach a single objective.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ===== References ===== -->
+
+        <section class="project-section">
+
+            <h2>6. References</h2>
+
+            <ul class="report-list report-references">
+
+                <li>
+                    <a href="https://tryhackme.com/" target="_blank"
+                    rel="noopener noreferrer">
+                        TryHackMe
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://exiftool.org/" target="_blank"
+                    rel="noopener noreferrer">
+                        ExifTool
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank"
+                    rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://gchq.github.io/CyberChef/" target="_blank"
+                    rel="noopener noreferrer">
+                        CyberChef
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- ===== Navigation ===== -->
+
+        <section class="project-links">
+
+            <a href="../index.html#reports" class="project-link">
+                ← Back to reports
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Codenaut</p>
+    </footer>
+
+</body>
+
+</html>

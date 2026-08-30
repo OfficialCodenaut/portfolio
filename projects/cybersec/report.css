@@ -1,0 +1,272 @@
+/* ===== Report Meta ===== */
+
+.report-meta {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 15px;
+
+
+max-width: 1200px;
+margin: 0 auto 100px;
+padding: 0 30px;
+
+box-sizing: border-box;
+
+
+}
+
+.report-meta-item {
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+
+padding: 18px 20px;
+
+background-color: var(--surface);
+border: 1px solid var(--surface-hover);
+border-radius: 12px;
+
+
+}
+
+.report-meta-label {
+font-family: "JetBrains Mono", monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+
+color: var(--muted);
+
+
+}
+
+.report-meta-value {
+font-size: 15px;
+color: var(--text);
+}
+
+/* ===== Report Content ===== */
+
+.report-figure {
+max-width: 100%;
+margin: 40px 0;
+}
+
+.report-figure img {
+display: block;
+
+
+max-width: 100%;
+height: auto;
+
+border: 1px solid var(--surface-hover);
+border-radius: 12px;
+
+
+}
+
+.report-figure figcaption {
+margin-top: 10px;
+
+
+font-family: "JetBrains Mono", monospace;
+font-size: 12px;
+line-height: 1.6;
+
+color: var(--muted);
+
+
+}
+
+/* ===== Report Headings ===== */
+
+.project-section h3 {
+margin: 40px 0 15px;
+
+
+font-size: 21px;
+font-weight: 600;
+
+
+}
+
+.project-section h3:first-child {
+margin-top: 0;
+}
+
+/* ===== Report Lists ===== */
+
+.report-list {
+max-width: 800px;
+margin: 0;
+padding-left: 25px;
+
+
+color: var(--muted);
+font-size: 17px;
+line-height: 1.8;
+
+
+}
+
+.report-list li {
+padding-left: 5px;
+margin-bottom: 8px;
+}
+
+.report-list li::marker {
+color: var(--accent);
+}
+
+.report-list a {
+color: var(--accent);
+text-decoration: none;
+}
+
+.report-list a:hover {
+text-decoration: underline;
+}
+
+/* ===== Report Code ===== */
+
+.project-section code {
+padding: 3px 7px;
+
+
+background-color: var(--surface);
+border: 1px solid var(--surface-hover);
+border-radius: 5px;
+
+font-family: "JetBrains Mono", monospace;
+font-size: 0.9em;
+
+color: var(--accent);
+
+
+}
+
+.project-section pre {
+overflow-x: auto;
+
+
+margin: 25px 0;
+padding: 20px;
+
+background-color: var(--surface);
+border: 1px solid var(--surface-hover);
+border-radius: 12px;
+
+box-sizing: border-box;
+
+
+}
+
+.project-section pre code {
+padding: 0;
+
+
+background: none;
+border: none;
+
+color: var(--text);
+font-size: 13px;
+line-height: 1.7;
+
+}
+
+/* ===== Report Result ===== */
+
+.report-result {
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+max-width: 800px;
+margin-top: 30px;
+padding: 20px 25px;
+
+background-color: var(--surface);
+border: 1px solid var(--accent);
+border-radius: 12px;
+
+box-sizing: border-box;
+
+}
+
+.report-result span {
+font-family: "JetBrains Mono", monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+color: var(--muted);
+
+}
+
+.report-result code {
+padding: 0;
+
+background: none;
+border: none;
+
+color: var(--accent);
+font-size: 15px;
+
+}
+
+/* ===== Report References ===== */
+
+.report-references {
+list-style-position: outside;
+}
+
+/* ===== Report Links ===== */
+
+.report-references a {
+transition: color 0.2s;
+}
+
+.report-references a:hover {
+color: var(--text);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+
+.report-meta {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 600px) {
+
+.report-meta {
+    grid-template-columns: 1fr;
+
+    margin-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.report-figure {
+    margin: 30px 0;
+}
+
+.report-figure img {
+    border-radius: 10px;
+}
+
+.report-list {
+    font-size: 16px;
+}
+
+.project-section pre {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+}
