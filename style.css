@@ -372,6 +372,7 @@ header {
     }
 }
 
+
 @media (max-width: 1280px) {
 
     header {
@@ -416,6 +417,30 @@ header {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 100px 30px 80px;
+    }
+
+    .hero-description {
+        font-size: 21px;
+    }
+
+    .about-section,
+    .projects-section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
@@ -432,15 +457,113 @@ header {
         font-size: 14px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+
+    /* ===== Hero ===== */
+
+    .hero {
+        padding: 80px 20px 70px;
+    }
+
+    .hero-label {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(52px, 16vw, 80px);
+    }
+
+    .hero-description {
+        margin-top: 20px;
+
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .hero-status {
+        margin-top: 25px;
+        font-size: 14px;
+    }
+
+
+    /* ===== About ===== */
+
+    .about-section,
+    .projects-section {
+        padding: 60px 20px;
     }
 
     .about-section h2,
     .projects-section h2,
     .contact-section h2 {
+        margin-bottom: 35px;
+
         font-size: 15px;
         letter-spacing: 1px;
         white-space: nowrap;
     }
+
+    .about-content {
+        gap: 35px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .about-focus h3 {
+        font-size: 18px;
+    }
+
+    .about-focus ul {
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+
+    /* ===== Projects ===== */
+
+    .project-pill {
+        min-height: 190px;
+        padding: 25px 20px;
+    }
+
+    .project-pill h3 {
+        font-size: 20px;
+    }
+
+    .project-pill p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .project-tags {
+        margin-top: 20px;
+    }
+
+
+    /* ===== Contact ===== */
+
+    .contact-section {
+        padding: 80px 20px;
+    }
+
+    .contact-section h1 {
+        font-size: clamp(38px, 11vw, 56px);
+    }
+
+    .contact-description {
+        font-size: 16px;
+    }
+
+    .contact-links {
+        gap: 10px;
+    }
+
+    .contact-link {
+        padding: 11px 16px;
+        font-size: 13px;
+    }
+
 }
