@@ -361,6 +361,152 @@
 }
 
 
+/* ===== Report Filters ===== */
+
+.report-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.report-filter {
+    padding: 8px 14px;
+
+    background-color: var(--background);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+
+    color: var(--accent);
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.report-filter:hover {
+    transform: translateY(-2px);
+}
+
+.report-filter.active {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.reports-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+}
+
+.report-card {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+min-height: 250px;
+padding: 25px;
+
+box-sizing: border-box;
+
+background-color: var(--surface);
+border: 1px solid var(--surface-hover);
+border-radius: 15px;
+
+transition:
+    transform 0.2s,
+    border-color 0.2s;
+
+}
+
+.report-card:hover {
+transform: translateY(-3px);
+border-color: var(--accent);
+}
+
+.report-type {
+margin: 0 0 12px;
+
+font-family: "JetBrains Mono", monospace;
+font-size: 11px;
+letter-spacing: 1.5px;
+
+color: var(--accent);
+
+}
+
+.report-card h3 {
+margin: 0 0 12px;
+
+font-size: 21px;
+
+}
+
+.report-description {
+margin: 0;
+
+color: var(--muted);
+font-size: 15px;
+line-height: 1.6;
+
+}
+
+.report-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 7px;
+
+margin-top: 20px;
+
+}
+
+.report-tags span {
+padding: 5px 9px;
+
+background-color: var(--background);
+border: 1px solid var(--surface-hover);
+border-radius: 6px;
+
+color: var(--muted);
+
+font-family: "JetBrains Mono", monospace;
+font-size: 11px;
+
+}
+
+.report-link {
+align-self: flex-start;
+
+margin-top: 25px;
+
+color: var(--text);
+text-decoration: none;
+
+font-family: "JetBrains Mono", monospace;
+font-size: 13px;
+
+transition: color 0.2s;
+
+}
+
+.report-link:hover {
+color: var(--accent);
+}
+
+/* ===== Report Filtering ===== */
+
+.report-card.hidden {
+display: none;
+}
+
+
 /* ===== Footer ===== */
 
 footer {
@@ -466,6 +612,10 @@ footer {
 
     .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .reports-grid { 
+        grid-template-columns: 1fr; 
     }
 
 }
