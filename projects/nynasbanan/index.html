@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Nynäsbanan | Codenaut</title>
+
+    <link rel="icon" type="image/png" href="../../assets/avatar.png?v=2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../project.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#development">Development</a></li>
+                <li><a href="../../">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="project-hero">
+
+            <p class="project-label">PROJECT</p>
+
+            <h1>Nynäsbanan</h1>
+
+            <p class="project-subtitle">
+                Railway simulator on Roblox inspired by the real-life Nynäsbanan railway line in Sweden.
+            </p>
+
+            <div class="project-tags">
+                <span>Roblox</span>
+                <span>Lua/Luau</span>
+                <span>Simulation</span>
+                <span>Systems</span>
+            </div>
+
+        </section>
+
+
+        <section class="project-section" id="overview">
+
+            <h2>Overview</h2>
+
+            <p>
+                Nynäsbanan is a railway simulation project built on Roblox,
+                inspired by the real-life Nynäsbanan railway line between Stockholm
+                and Nynäshamn.
+            </p>
+
+            <p>
+                The project focuses on building a realistic train simulation from
+                the ground up, combining railway infrastructure, train systems,
+                multiplayer networking, and interactive driving mechanics.
+            </p>
+
+            <p>
+                Rather than relying entirely on Roblox's built-in physics,
+                the project uses custom systems to control train movement,
+                track following, consists, and player interaction.
+            </p>
+
+        </section>
+
+
+        <section class="project-status">
+
+            <h2>Project Status</h2>
+
+            <div class="status-output">
+
+                <div class="status-header">
+                    <span>STATUS</span>
+                    <span>PLATFORM</span>
+                    <span>DEVELOPMENT</span>
+                </div>
+
+                <div class="status-row">
+
+                    <span class="status-active">
+                        <span class="status-dot"></span>
+                        ACTIVE
+                    </span>
+
+                    <span>ROBLOX</span>
+
+                    <span>IN DEVELOPMENT</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="project-features" id="features">
+
+            <h2>Features</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>Custom Track System</h3>
+                    <p>
+                        Train movement is based on a custom spline-driven
+                        track system designed to follow railway geometry.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Train Consists</h3>
+                    <p>
+                        The system supports configurable train consists,
+                        including both 6-car and 12-car SL X60 configurations.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Cabin Camera</h3>
+                    <p>
+                        A dedicated driver's camera provides an immersive
+                        first-person view from inside the train cab.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Driver Assignment</h3>
+                    <p>
+                        Players can be assigned to operate trains through
+                        the simulation's multiplayer systems.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Server-Authoritative Systems</h3>
+                    <p>
+                        Core train state and movement are handled
+                        server-side to maintain consistent multiplayer state.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Railway Infrastructure</h3>
+                    <p>
+                        The project recreates railway infrastructure and
+                        environments inspired by the real Nynäsbanan line.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="project-workflow">
+
+            <h2>How It Works</h2>
+
+            <div class="workflow">
+
+                <div class="workflow-step">
+                    <span>01</span>
+                    <h3>Track</h3>
+                    <p>
+                        Railway geometry is represented using a spline-based
+                        track system.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>02</span>
+                    <h3>Consist</h3>
+                    <p>
+                        Train cars are assembled into a configurable
+                        locomotive or EMU consist.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>03</span>
+                    <h3>Simulation</h3>
+                    <p>
+                        The train follows the track while its movement and
+                        state are controlled by the simulation systems.
+                    </p>
+                </div>
+
+                <div class="workflow-step">
+                    <span>04</span>
+                    <h3>Player</h3>
+                    <p>
+                        Players interact with the train through the driver's
+                        cabin and multiplayer control systems.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tech-stack">
+
+            <h2>Tech Stack</h2>
+
+            <div class="tech-grid">
+
+                <div class="tech-item">
+                    <span class="tech-name">Roblox</span>
+                    <span class="tech-role">Game Platform</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-name">Luau</span>
+                    <span class="tech-role">Core Language</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-name">Roblox Studio</span>
+                    <span class="tech-role">Development Environment</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="development-section" id="development">
+
+            <h2>Development</h2>
+
+            <p>
+                The project is developed as a three-person team, with a focus
+                on building the underlying simulation systems rather than
+                simply creating a visual railway environment.
+            </p>
+
+            <p>
+                One of the main technical challenges is representing railway
+                movement in a way that remains smooth and predictable across
+                curves, different train configurations, and multiplayer
+                interactions.
+            </p>
+
+            <p>
+                The architecture is being developed around server-authoritative
+                train state, custom track geometry, and modular systems that
+                can be extended as the simulation grows.
+            </p>
+
+        </section>
+
+
+        <section class="project-links">
+
+            <h2>Links</h2>
+
+            <a href="#" class="project-link">
+                <img src="https://cdn.simpleicons.org/roblox/white" alt="Roblox">
+                View project on Roblox →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2026 Codenaut</p>
+    </footer>
+
+</body>
+</html>
